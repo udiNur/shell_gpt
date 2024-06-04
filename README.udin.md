@@ -11,7 +11,8 @@ set -e
 program="${0##*/}"
 
 export PYENV_ROOT="/Users/yehuda/.pyenv"
-#exec "/opt/homebrew/opt/pyenv/bin/pyenv" exec "$program" "$@"
+eval "$(pyenv init -)"
+pyenv shell 3.12.1
 python /Users/yehuda/Projects/Python/shell_gpt/sgpt/app.py "$@"
 ```
 
